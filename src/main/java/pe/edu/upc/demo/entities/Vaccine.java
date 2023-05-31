@@ -22,11 +22,19 @@ public class Vaccine {
     public Vaccine() {
     }
 
-    public Vaccine(int idVaccine, String nameVaccine, LocalDate dateVaccine, String observationVaccine, Pet pet) {
+    public Vaccine(int idVaccine, String nameVaccine, LocalDate dateVaccine, String observationVaccine, pe.edu.upc.demo.entities.Pet pet) {
         this.idVaccine = idVaccine;
         this.nameVaccine = nameVaccine;
         this.dateVaccine = dateVaccine;
         this.observationVaccine = observationVaccine;
+        this.pet = pet;
+    }
+
+    public pe.edu.upc.demo.entities.Pet getPet() {
+        return pet;
+    }
+
+    public void setPet(pe.edu.upc.demo.entities.Pet pet) {
         this.pet = pet;
     }
 
@@ -62,11 +70,5 @@ public class Vaccine {
         this.observationVaccine = observationVaccine;
     }
 
-    public Pet getPet() {
-        return pet;
-    }
 
-    public void setPet(Pet pet) {
-        this.pet = pet;
-    }
 }

@@ -13,14 +13,26 @@ public class VetClean {
     private String nameVetC;
     @Column(name = "ageVet",length = 150,nullable = false)
     private  int ageVet;
+    @ManyToOne
+    @JoinColumn(name = "idPet")
+    private Pet pet;
 
     public VetClean() {
     }
 
-    public VetClean(int idVetC, String nameVetC, int ageVet) {
+    public VetClean(int idVetC, String nameVetC, int ageVet, Pet pet) {
         this.idVetC = idVetC;
         this.nameVetC = nameVetC;
         this.ageVet = ageVet;
+        this.pet = pet;
+    }
+
+    public Pet getPet() {
+        return pet;
+    }
+
+    public void setPet(Pet pet) {
+        this.pet = pet;
     }
 
     public int getIdVetC() {
