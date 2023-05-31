@@ -7,5 +7,11 @@ import java.util.List;
 public interface IPetService {
     public  void insert(Pet pet);
     List<Pet> list();
+    public void delete(int idPet);
+    public Pet LisID(int idPet);
+
+
+
+
 
 }
